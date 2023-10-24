@@ -1,0 +1,970 @@
+@charset "utf-8";
+
+.topsticky
+{
+	position: fixed !important;
+	top: 0 !important;
+	z-index: 999;
+
+}
+
+.PsuedoBlessings
+{
+    font-family: "Bebas Neue";	
+}
+
+.Artistry
+{
+    font-family: "Carter One";	
+}
+
+.Programming
+{
+    font-family: "Press Start 2P";	
+}
+
+.Nav
+{}
+
+body
+{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header
+{
+	height: 30%;
+	width: 100%;
+	display: flex;
+	background-image:linear-gradient(rgb(53, 53, 53), rgba(53, 53, 53, 0.747), rgba(255,0,0,0));
+	justify-content: center;
+}
+
+header button
+{
+	width:33%;
+    border: none;
+    background: none;
+    color: #FFFFFF;
+}
+
+
+header #pbbtn
+{
+    padding-bottom: 40px;
+}
+
+#pgbtn
+{
+	font-size: 20px;
+	transition: color 1s ease-in;
+}
+
+#pbbtn
+{
+    font-size: 50px;
+	transition: color 1s ease-in;
+}
+
+#artbtn
+{
+	font-size: 30px;
+	transition: color 1s ease-in;
+}
+
+#programmingnav
+{
+	display: none;
+	background-image:linear-gradient(rgb(0, 0, 81), rgba(255,0,0,0));
+}
+
+#psuedoblessingsnav
+{
+	display: none;
+	background-image:linear-gradient(rgb(48, 23, 91), rgba(255,0,0,0));
+}
+
+#artistrynav
+{
+	display: none;
+	background-image:linear-gradient(rgb(81, 0, 0), rgba(255,0,0,0));
+}
+
+nav
+{
+	height: 40%;
+	width: 100%;
+	display: grid;
+	grid-template-areas:
+		". title1 title1 title2 title2 title3 title3 ."
+		". item1 item1 item3 item3 item5 item5 ."
+		". item2 item2 item4 item4 item6 item6 .";
+	
+}
+
+nav button
+{
+	border: none;
+    background: none;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav #pgbtn
+{
+    grid-area: title1;
+    justify-self: center;	
+}
+
+#schoolbtn
+{
+	font-size: 17px;
+	grid-area: item1;
+	justify-self: left;
+}
+
+#personalbtn
+{
+	font-size: 17px;
+	grid-area: item2;
+	justify-self: left;
+}
+
+nav #pbbtn
+{
+	grid-area: title2;
+	padding-bottom: 40px;
+}
+
+#abtmebtn
+{
+	font-size: 40px;
+	grid-area: item1;
+}
+
+#homebtn
+{
+	font-size: 40px;
+	grid-area: item3;
+}
+
+#contactbtn
+{
+	font-size: 40px;
+	grid-area: item5;
+}
+
+nav #artbtn
+{
+	grid-area: title3;
+	justify-self: center;
+}
+
+#photobtn
+{
+	font-size: 20px;
+	grid-area: item6;
+	justify-self: center;
+}
+
+#anibtn
+{
+	font-size: 20px;
+	grid-area: item5;
+	justify-self: center;
+}
+
+#gdbtn
+{
+	font-size: 20px;
+	grid-area: item3;
+	justify-self: center;
+}
+
+footer
+{
+    height: 70px;
+    width: 100%;
+	margin-top: auto;
+    display: flex;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(102,102,102,0.35));
+    justify-content: center;
+	
+}
+
+footer img
+{
+    height: 50px;
+    width: auto;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+h1
+{
+	color: rgba(255,255,255,1.00);
+    font-size: 90px;
+	font-weight: 75;
+    grid-area: title;
+    text-align: center;
+}
+
+intro
+{
+	display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 150px;	
+}
+
+intro h1
+{
+	
+	font-size: 100px;
+	margin-bottom: 0;
+}
+
+intro h3
+{
+    font-size: 33px;
+    font-weight: 75;
+    margin-top: 0;
+}
+
+slideshow
+{
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+slideshow button
+{
+	border: none;
+    background: none;
+    color: #FFFFFF;	
+	font-size: 40px;
+}
+
+#slide-container
+{
+	max-height: 576px;
+	max-width: 1024px;
+}
+
+panel h3
+{
+	width: 100%;
+    height: 100%;
+    line-height: 80%;
+    top: -25%;
+}
+
+featured panel h3
+{
+    position: absolute;
+    color: white;
+    font-size: 45px;
+}
+
+employment panel h3
+{
+	position: absolute;
+    color: white;
+    font-size: 52px;
+}
+
+panel:nth-of-type(odd) > h3
+{
+	text-align: right;
+	
+	
+}
+
+panel:nth-of-type(even) > h3
+{
+	text-align: left;
+}
+
+panel img
+{
+	height: inherit;
+	width: 100%;
+	object-fit: cover;
+}
+
+featured panel:nth-child(even)
+{
+	height: 150px;
+	width: 400px;
+	transform: rotate(10deg) skew(10deg);
+	-webkit-mask-image: linear-gradient(-80deg, black, transparent);
+	-webkit-mask-size: 100%;
+	background-color: rgba(46,84,218,1.00);	
+}
+
+featured panel:nth-child(odd)
+{
+	height: 150px;
+	width: 400px;
+	transform: rotate(-10deg) skew(-10deg);
+	-webkit-mask-image: linear-gradient(80deg, black, transparent);
+	-webkit-mask-size: 100%;
+	background-color: rgba(210,17,20,1.00);
+}
+
+featured
+{
+	width: 90%;
+	height: auto;
+	display: grid;
+	grid-template-areas:
+		". . title title title . ."
+		"panel1 panel1 panel1 . panel2 panel2 panel2"
+		"panel3 panel3 panel3 . panel4 panel4 panel4"
+		"panel5 panel5 panel5 . panel6 panel6 panel6";
+	justify-items: center;
+	margin-top: 50px;
+    margin-bottom: 50px;
+	grid-row-gap: 90px;
+	
+}
+
+#featured-panel-1
+{
+	
+    grid-area: panel1;
+}
+
+#featured-panel-2
+{
+    grid-area: panel2; 
+}
+
+#featured-panel-3
+{
+    grid-area: panel3; 
+}
+
+#featured-panel-4
+{
+    grid-area: panel4; 
+}
+
+#featured-panel-5
+{
+    grid-area: panel5; 
+}
+
+#featured-panel-6
+{
+    grid-area: panel6; 
+}
+
+employment panel:nth-child(even)
+{
+	height: 150px;
+	width: 85%;
+	transform: rotate(-4deg) skew(-4deg);
+	-webkit-mask-image: linear-gradient(-80deg, black, transparent, transparent);
+	-webkit-mask-size: 200%;
+	-webkit-mask-position: -100% 0%;
+	background-color: rgba(210,32,35,1.00);
+}
+
+employment panel:nth-child(odd)
+{
+	height: 150px;
+	width: 85%;
+	transform: rotate(4deg) skew(4deg);
+	-webkit-mask-image: linear-gradient(-80deg,transparent, transparent, black);
+	-webkit-mask-size: 200%;
+	-webkit-mask-position: 0% 0%;
+	background-color: rgba(46,84,218,1.00);
+}
+
+employment
+{
+	width: 90%;
+	height: auto;
+	display: grid;
+	grid-template-areas:
+		". title title ."
+		". panel1 panel1 panel1"
+		"panel2 panel2 panel2 ."
+		". panel3 panel3 panel3"
+		"panel4 panel4 panel4 .";
+	justify-items: center;
+	gap: 15px;
+	margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#employment-panel-1
+{
+	grid-area: panel1;
+}
+
+#employment-panel-2
+{
+	grid-area: panel2;
+}
+
+#employment-panel-3
+{
+	grid-area: panel3;
+}
+
+#employment-panel-4
+{
+	grid-area: panel4;
+}
+
+skills
+{
+	width: 90%;
+	height: auto;
+	display: grid;
+	grid-template-areas:
+		". . . title title . . ."
+		". frontend frontend . . backend backend ."
+		". . . art art . . . ";
+	justify-items: center;
+	margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+skills h1
+{
+	color: white;
+	
+}
+
+skills button
+{
+	color: white;
+	font-size: 60px;
+	background: none;
+	border: none;
+}
+
+skills button:nth-child(2)
+{
+	grid-area: frontend;
+}
+
+skills button:nth-child(3)
+{
+	grid-area: art;
+	
+}
+skills button:nth-child(4)
+{
+	grid-area: backend;
+	
+}
+
+/* animation */
+
+/* utility */
+
+.animate
+{
+	visibility: visible !important;
+	position: relative;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-play-state: running !important;
+}
+
+.AnimateOnScroll
+{
+	visibility: hidden;
+	animation-play-state: paused;
+}
+
+.AnimateOnButtonPress
+{
+	animation-play-state: paused;
+}
+
+.infinite
+{
+	animation-iteration-count: infinite;
+}
+
+.reverse
+{
+	animation-direction: reverse;
+}
+
+.fast
+{
+	animation-duration: 0.3s;
+}
+
+.slow
+{
+	animation-duration: 3s;
+}
+
+.delay
+{
+	animation-delay: 1s;
+}
+
+.fast-delay
+{
+	animation-delay: 0.3s;
+}
+
+.slow-delay
+{
+	animation-delay: 3s;
+}
+
+.fill-none
+{
+	animation-fill-mode: none;
+}
+
+.fill-forwards
+{
+	animation-fill-mode: forwards;
+}
+
+.fill-backwards
+{
+	animation-fill-mode: backwards;
+}
+
+.fill-both
+{
+	animation-fill-mode: both;
+}
+
+.ease-in-out
+{
+	animation-timing-function: ease-in-out;
+}
+
+.ease-out
+{
+	animation-timing-function: ease-out;
+}
+
+/* keyframes */
+
+@keyframes walksOnLeft
+{
+	from
+	{
+		right: 100%;;
+	}
+	to
+	{
+		right: 0%;
+	}
+}
+
+.walksOnLeft
+{
+	animation-name: walksOnLeft;
+}
+
+@keyframes walksOnRight
+{
+	from
+	{
+		left: 100%;;
+	}
+	to
+	{
+		left: 0%;
+	}
+}
+
+.walksOnRight
+{
+	animation-name: walksOnRight;
+}
+
+
+@keyframes revealFromBottom
+{
+	from
+	{
+		opacity: 0%;
+		top: -66px;
+	}
+	to
+	{
+		opacity: 100%;
+		top: 0px;
+	}
+}
+
+.revealFromBottom
+{
+	animation-name: revealFromBottom;
+}
+
+@keyframes scaleToptoBottom
+{
+	from
+	{
+		transform: scale(1, 0);
+	}
+	to
+	{
+		transform: scale(1, 1);
+	}
+}
+
+.scaleToptoBottom
+{
+	transform-origin: top;
+	animation-name: scaleToptoBottom;
+}
+
+@keyframes scaleRighttoLeft
+{
+	from
+	{
+		transform: scale(0);
+	}
+	to
+	{
+		transform: scale(1);
+	}
+}
+
+.scaleRighttoLeft
+{
+	animation-name: scaleRighttoLeft;
+	transform-origin: right;
+}
+
+@keyframes scaleLefttoRight
+{
+	from
+	{
+		transform: scale(0);
+	}
+	to
+	{
+		transform: scale(1);
+	}
+}
+
+.scaleLefttoRight
+{
+	animation-name: scaleLefttoRight;
+	transform-origin: left;
+}
+
+.revealShine 
+{
+	background: -webkit-linear-gradient(left, white, rgba(255, 255, 255, 90), rgba(255, 255, 255, 10), rgba(255, 255, 255, 10), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 800%;
+	animation-name: revealShine;
+}
+
+@keyframes revealShine
+{
+	0%
+	{
+		background-position: 100% 50%;
+	}
+	100%
+	{
+		background-position: 0% 50%;
+	}
+}
+
+.diagonalWalkLeft
+{
+	transform-origin: 0% 50%;
+	animation-name: diagonalWalkLeft;
+}
+
+@keyframes diagonalWalkLeft
+{
+	0%
+	{
+		opacity: 0;
+		right: 100%;
+		top: -50%;
+		scale: 50% 100%;
+		
+	}
+	
+	100%
+	{
+		opacity: 1;
+		right: 0%;
+		top: 0%;
+		scale: 100% 100%;
+	}
+	
+}
+
+.diagonalWalkRight
+{
+	transform-origin: 100% 50%;
+	animation-name: diagonalWalkRight;
+	
+	
+	
+}
+
+@keyframes diagonalWalkRight
+{
+	0%
+	{
+		opacity: 0;
+		left: 100%;
+		top: -50%;
+		scale: 50% 100%;
+	}
+	
+	100%
+	{
+		opacity: 1;
+		left: 0%;
+		top: 0%;
+		scale: 100% 100%;
+	}
+	
+}
+
+.fadeInLeft
+{
+	animation-name: fadeInLeft;
+}
+
+@keyframes fadeInLeft 
+{
+	0%
+	{
+		-webkit-mask-position: 0% 0%;
+	}
+	
+	100% 
+	{
+		-webkit-mask-position: -100% 0%;
+	}
+}
+
+.fadeInRight
+{
+	animation-name: fadeInRight;
+}
+
+@keyframes fadeInRight 
+{
+	0%
+	{
+		-webkit-mask-position: -100% 0%;
+	}
+	
+	100% 
+	{
+		-webkit-mask-position: 0% 0%;
+	}
+}
+
+
+
+.typewriter
+{
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+  	white-space: nowrap; /* Keeps the content on a single line */
+ 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  	letter-spacing: .15em; /* Adjust as needed */
+	animation-delay: 3s, 3s;
+	animation: 
+	typing 3.5s steps(30, end),
+	blink-caret .5s;
+}
+
+/* The typing effect */
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: white }
+  }
+
+.fadelarger
+{
+	animation-name: fadelarger;
+}
+
+@keyframes fadelarger
+{
+	0%
+	{
+		transform:  scale(1);
+		opacity: 1;
+	}
+	
+	50%
+	{
+		transform:  scale(1.25);
+		opacity: 0;
+	}
+	
+	100%
+	{
+		transform:  scale(1.5);
+		opacity: 1;
+	}
+}
+
+.fadesmaller
+{
+	animation-name: fadesmaller;
+}
+
+@keyframes fadesmaller
+{
+	0%
+	{
+		transform:  scale(100%);
+		opacity: 1;
+	}
+	
+	50%
+	{
+		opacity: 0;
+	}
+	
+	100%
+	{
+		transform:  scale(50%);
+		opacity: 1;
+	}
+}
+
+.onefourthup
+{
+	animation-name: onefourthup;
+}
+
+@keyframes onefourthup
+{
+	0%
+	{
+		top: 0%;
+	}
+	
+	100%
+	{
+		top: -100%;
+	}
+}
+
+.onefourthdown
+{
+	animation-name: onefourthdown;
+}
+
+@keyframes onefourthdown
+{
+	0%
+	{
+		bottom: 0%;
+	}
+	
+	100%
+	{
+		bottom: -100%;
+	}
+}
+
+.fadelargerup
+{
+	animation-name: onefourthup, fadelarger;
+}
+
+.fadelargerdown
+{
+	animation-name: onefourthdown, fadelarger;
+}
+
+@keyframes revealEmploymentL
+{
+	0% {}
+	100% {transform: rotate(0deg) skew(0deg);
+		-webkit-mask-size: 800%;
+		width: 100%;}
+}
+
+.revealEmploymentL:hover
+{
+	animation-name: revealEmploymentL;
+}
+
+@keyframes revealEmploymentR
+{
+	0% {}
+	100% {transform: rotate(0deg) skew(0deg);
+		-webkit-mask-position: -15% 0%;
+		-webkit-mask-size: 800%;
+		width: 100%;}
+}
+
+.revealEmploymentR:hover
+{
+	animation-name: revealEmploymentR;
+}
+
+@keyframes revealFeatureR
+{
+	0%{}
+	100%{transform: rotate(0deg) skew(0deg);
+		-webkit-mask-size: 200%;
+		width: 100%;}
+}
+
+.revealFeatureR:hover
+{
+	animation-name: revealFeatureR;
+}
+
+@keyframes revealFeatureL
+{
+	0%{}
+	100%{transform: rotate(0deg) skew(0deg);
+		-webkit-mask-size: 200%;
+		-webkit-mask-position: 70% 0%;
+		width: 100%;}
+}
+
+.revealFeatureL:hover
+{
+	animation-name: revealFeatureL;
+}
+
+/* transitions */
+
+
