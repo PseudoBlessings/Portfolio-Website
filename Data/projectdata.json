@@ -5,7 +5,7 @@
         "Skills":"HTML5,JavaScript,CSS,JSON",
         "Duration":"03/2023 - Current",
         "Summary":"This website is created by me through pure HTML5, Javascript, and Python.",
-        "FileName":"PsuedoBlessings.png",
+        "FileName":"psuedoblessings.png",
         "URL":"https://psuedoblessings.com",
         "BlackText": false
     },
@@ -15,7 +15,7 @@
         "Skills":"Python, Language Design",
         "Duration":"",
         "Summary":"This program is made with python mimicking the programming language called postscript.",
-        "FileName":"SSPSInterpreter.PNG",
+        "FileName":"sspsinterpreter.PNG",
         "URL":"https://github.com/PsuedoBlessings/SSPS-Interpreter",
         "BlackText": false
     },

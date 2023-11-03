@@ -57,25 +57,19 @@ class FeaturedPanel extends Panel{
 	
 };
 
-fetch("./Data/employerdata.json")
+fetch("./Data/employerdata.json") // fetches the JSON and usese them to create the panels for the Employer Section
 	.then(function(res){
 		return res.json();
 	})
 	.then(function(employerJSON){
-		var paneltest = employerJSON[0];
-
-		const EMPLOYERPANELTEST = new EmployerPanel (paneltest.Employer, paneltest.Position, paneltest.Duration, paneltest.Summary, paneltest.Filename, paneltest.URL, paneltest.BlackText);
-
 		employerJSON.forEach((panel, index) => generatePanel(panel, index, "EMPLOYER", "employerJSON", "EmployerPanel"))
 	})
 
-fetch('./Data/projectdata.json')
+fetch('./Data/projectdata.json') // fetches the JSON and usese them to create the panels for the Featured Section
 	.then(function(res){
 		return res.json();
 	})
 	.then(function (projectJSON){
-
-		
 		projectJSON.forEach((panel, index) => generatePanel(panel, index, "FEATURE", "projectJSON", "FeaturedPanel"))
 	});
 
