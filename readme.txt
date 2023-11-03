@@ -1,7 +1,9 @@
 *************** Naming Standards (abbreviatoins and ambiguouty are not allowed) ***************
 
 Files/Folders (ie. index.html project-data.json)
-- Lowercase letters
+- File names are lowercase letters
+
+-Folders names are UpperCamelCase
 
 - spaces are represented as hypens.
 
@@ -75,5 +77,19 @@ JSON (https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_N
 
 - Reserved JavaScript keywords should be avoided (A list of reserved JavaScript keywords can be found below).
 
+********************************************************************************************************************
+
+*************** Animations Guide (this is for JavaScript) ***************
+- Animations shall be exported frame by frame as webp  (do not get rid of duplicate frames).
+
+- The names of the exported frames shall be the frame # only (etc 12.webp).
+
+- The folder containing exported frames shall be named what the animation is named. 
+
+- Folder Names shall be UpperCamelCase and contain no special characters (HighFivingSomone).
+
+- Animations are assumed to be run at 24 frames per second
+
+- The JSON file containing the information for animations shall have the duration, name/file location. 
 ********************************************************************************************************************
 

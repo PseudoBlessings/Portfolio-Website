@@ -4,7 +4,8 @@
     "Position": "Data Security Analyst",
     "Duration": "02/2022 - Current",
     "Summary": "Work for the Information Technology Services department. I'm in charge of checking suspected phishing emails and analyzing them.",
-    "FileName": "WSU.png",
+    "Description": "",
+    "FileName": "wsu.png",
     "URL":"",
     "BlackText": true
 },
@@ -13,7 +14,8 @@
     "Position": "Editor Intern",
     "Duration": "09/2021 - Current",
     "Summary": "LandEscapes is a literature journal publishing company that accepts works from students at Washington State University, such as art, photography, poetry, fiction, and nonfiction. As an editor, I'm responsible for organizing submissions, contacting submitters, and editing work.",
-    "FileName": "LE.png",
+    "Description": "",
+    "FileName": "le.png",
     "URL":"",
     "BlackText": false
 },
@@ -22,7 +24,8 @@
     "Position": "Web Designer Intern",
     "Duration": "09/2023 - Current",
     "Summary": "As a website designer, I'm in charge of LandEscapes' website (https://landescapes.wsu.edu) updating the various parts, keeping up with documentation, and adding new features.",
-    "FileName": "LE.png",
+    "Description": "",
+    "FileName": "le.png",
     "URL": "",
     "BlackText": false
 },
@@ -31,7 +34,8 @@
     "Position": "Background Animator",
     "Duration": "08/2021 - 01/2022",
     "Summary": "Background Animator Intern for the Building U organization. Was in charge of animating the background for their Google ad project.",
-    "FileName": "buildingU.png",
+    "Description": "",
+    "FileName": "buildingu.png",
     "URL":"",
     "BlackText": true
 }
