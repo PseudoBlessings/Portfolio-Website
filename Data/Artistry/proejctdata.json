@@ -1,0 +1,85 @@
+{
+    "MotionMediaProjects":[
+        {
+            "Title":"Catfishing The KKK Josh Johnson",
+            "Creators":["Zvikomborero Masike"],
+            "Date":"10/23/2020",
+            "Summary":"This animation is display of lip syncing in animation using the skit from John Johnson",
+            "ImagePath":"https://img.youtube.com/vi/ZWsmmOfYQeA/maxresdefault.jpg",
+            "Embed":"<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZWsmmOfYQeA?si=5NHdJ2nzcwVLAL7c\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>",
+            "Tags":[""]
+        },
+
+        {
+            "Title":"",
+            "Creators":[""],
+            "Date":"",
+            "Summary": "",
+            "ImagePath":"",
+            "Embed":"",
+            "Tags":[""]
+        },
+
+        {
+            "Title":"",
+            "Creators":[""],
+            "Date":"",
+            "Summary": "",
+            "ImagePath":"",
+            "Embed":"",
+            "Tags":[""]
+        },
+
+        {
+            "Title":"",
+            "Creators":[""],
+            "Date":"",
+            "Summary": "",
+            "ImagePath":"",
+            "Embed":"",
+            "Tags":[""]
+        }
+    ],
+
+    "VisualArtsProjects":[
+        {
+            "Title":"",
+            "Creators":[""],
+            "Date":"",
+            "Summary": "",
+            "ImagePath":"",
+            "Embed":"",
+            "Tags":[""]
+        },
+    
+        {
+            "Title":"",
+            "Creators":[""],
+            "Date":"",
+            "Summary": "",
+            "ImagePath":"",
+            "Embed":"",
+            "Tags":[""]
+        },
+        
+        {
+            "Title":"",
+            "Creators":[""],
+            "Date":"",
+            "Summary": "",
+            "ImagePath":"",
+            "Embed":"",
+            "Tags":[""]
+        },
+    
+        {
+            "Title":"",
+            "Creators":[""],
+            "Date":"",
+            "Summary": "",
+            "ImagePath":"",
+            "Embed":"",
+            "Tags":[""]
+        }
+    ]
+}

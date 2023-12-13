@@ -1,0 +1,43 @@
+{
+    "ProgrammingProjects":[
+        {
+            "Title":"SSPS-Interpreter",
+            "Creators":["Zvikomborero Masike"],
+            "Date":"",
+            "Summary": "This program is made with python mimicking the programming language called postscript",
+            "ImagePath":"Image\\Programming\\School\\CPT_S\\CptS-355\\sspsinterpreter.png",
+            "URL":"https://github.com/PsuedoBlessings/SSPS-Interpreter",
+            "Tags":["Language Design", "Python", "School"]
+        },
+
+        {
+            "Title":"Diet Plan C++",
+            "Creators":["Zvikomborero Masike"],
+            "Date":"2/16/2022",
+            "Summary": "This programs makes goals for both diets and excersice and stores them within a file to be accessed later.",
+            "ImagePath":"Image\\Programming\\School\\CPT_S\\CptS-121\\dietplan.jpg",
+            "URL":"https://github.com/PsuedoBlessings/DietPlan",
+            "Tags":["C++", "School"]
+        },
+
+        {
+            "Title":"Fitbit Data Manager C",
+            "Creators":["Zvikomborero Masike"],
+            "Date":"1/29/2022",
+            "Summary": "This C program manages data extracted from a Fitbit and reads, clean and prints out the Fitbit data.",
+            "ImagePath":"",
+            "URL":"https://github.com/PsuedoBlessings/FitbitDataManagerC",
+            "Tags":["C", "School"]
+        },
+
+        {
+            "Title":"Assembly Calculator",
+            "Creators":["Zvikomborero Masike"],
+            "Date":"",
+            "Summary": "A simple calculator made through assembly",
+            "ImagePath":"",
+            "URL":"https://github.com/PsuedoBlessings/Assembly-Calculator",
+            "Tags":["Assembly", "Computer Architecture", "School"]
+        }
+    ]
+}

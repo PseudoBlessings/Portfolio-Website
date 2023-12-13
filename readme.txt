@@ -93,3 +93,16 @@ JSON (https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_N
 - The JSON file containing the information for animations shall have the duration, name/file location. 
 ********************************************************************************************************************
 
+*************** JSON Data  ***************
+- Do not store any personal or confidential information within the JSON file as it will be available publicly.
+
+- projectdata.json contains information about the projects (description, timeline, skills, etc)
+
+- Organize projectdata.json from most important project to least important project.
+
+- 
+
+- Organize employerdata.json by both most important and most recent.
+
+
+********************************************************************************************************************

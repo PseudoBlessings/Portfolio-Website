@@ -1,225 +1,70 @@
-import {Panel, Animation, HeaderItem } from "./JS_Module/websitemodule.js";
+import {Panel} from "./JS_Module/websitemodule.js";
 
-class EmployerPanel extends Panel{
-	constructor(employer, position, duration, summary, filename, url, blacktext) {
-		super();
-		super.name = employer;
-		this.position = position;
-		this.duration = duration;
-		super.summary = summary;
-		super.image = filename;
-		super.url = url;
-		if(blacktext == true)
-		{
-			super.textcolor = "black";
-		}
-
-		else
-		{
-			super.textcolor = "white";
-		}
-	}
-
-	displayText(element) // meant to display the text for the employer panel
+class EmploymentPanel extends Panel{
+	constructor(employer = '', position = '', duration = '', imagepath = '', url = '') 
 	{
-		element.innerHTML = (this.name + "<br>" + this.position + "<br>" + this.duration);
-		this.renderTextColor(element);
+		super();
+		linebreaker = "\r\n"; //use this to add new lines
+		this.title = employer + position;
+		this.id = employer + position;
+		
+
+		//creating the summary or paragraph html element <p>
+		this.panel = document.createElement("div");
+		this.panel.setAttribute("id", this.id);
+		if(url != '')
+		{
+			this.panel.setAttribute("onclick", "open(" + +"'"+ url +"'"+ ", '_blank')");
+		}
+		//creating the summary or paragraph html element <p>
+		this.summary = document.createElement("p")
+		this.summary.textContent(employer + linebreaker + position + linebreaker + duration);
+		//creating the image html element <img> 
+		this.image = document.createElement("img");
+		this.image.src = imagepath;
+		//putting them all together
+		this.panel.append(this.summary, this.image);
 	}
+
+	changeSummary(employer = '', position = '', duration = '')
+	{
+		linebreaker = "\r\n"; //use this to add new lines
+		this.summary.textContent(employer + linebreaker + position + linebreaker + duration);
+	}
+
 };
 
 class FeaturedPanel extends Panel{
-	constructor(name, award, skills, duration, summary, filename, url, blacktext){
-		super();
-		super.name = name;
-		this.award = award;
-		this.skills = skills;
-		this.duration = duration;
-		super.summary = summary;
-		super.image = filename;
-		super.url = url;
-		if(blacktext == true)
-		{
-			super.textcolor = "black";
-		}
-
-		else
-		{
-			super.textcolor = "white";
-		}
-	}
-
-	displayText(element) // meant to display the text for the featured panel
+	constructor(title = '', award = '', skills = '', duration = '', imagepath = '', url = '')
 	{
-		element.innerHTML = (this.name + "<br>" + this.award + "<br>" + this.skills + "<br>" + this.duration);
-		this.renderTextColor(element);
-	}
+		super();
+		linebreaker = "\r\n"; //use this to add new lines
+		this.title = title
+		this.id = title
+		
 
+		//creating the summary or paragraph html element <p>
+		this.panel = document.createElement("div");
+		this.panel.setAttribute("id", this.id);
+		if(url != '')
+		{
+			this.panel.setAttribute("onclick", "open(" + +"'"+ url +"'"+ ", '_blank')");
+		}
+		//creating the summary or paragraph html element <p>
+		this.summary = document.createElement("p")
+		this.summary.textContent(title + linebreaker + award + linebreaker + skills + linebreaker + duration);
+		//creating the image html element <img> 
+		this.image = document.createElement("img");
+		this.image.src = imagepath;
+		//putting them all together
+		this.panel.append(this.summary, this.image);
+	}
 	
+	changeSummary(title = '', award = '', skills = '', duration = '')
+	{
+		linebreaker = "\r\n"; //use this to add new lines
+		this.summary.textContent(title + linebreaker + award + linebreaker + skills + linebreaker + duration);
+	}	
 };
 
-fetch("./Data/employerdata.json") // fetches the JSON and usese them to create the panels for the Employer Section
-	.then(function(res){
-		return res.json();
-	})
-	.then(function(employerJSON){
-		employerJSON.forEach((panel, index) => generatePanel(panel, index, "EMPLOYER", "employerJSON", "EmployerPanel"))
-	})
 
-fetch('./Data/projectdata.json') // fetches the JSON and usese them to create the panels for the Featured Section
-	.then(function(res){
-		return res.json();
-	})
-	.then(function (projectJSON){
-		projectJSON.forEach((panel, index) => generatePanel(panel, index, "FEATURE", "projectJSON", "FeaturedPanel"))
-	});
-
-function removepanel(panel, index){
-	if(panel instanceof EmployerPanel)
-	{
-		if(panel.employer == "")
-		{
-			document.getElementById("employer-panel-" + (index+1)).remove();
-		};
-	}
-
-	if(panel instanceof ProjectPanel)
-	{
-		if(panel.projectname == "")
-		{
-			document.getElementById("featured-panel-" + (index+1)).remove();
-		};
-	}
-}
-
-function generatePanel(panel /*Type: JSON Array*/, index /*Type: Int (0,∞)*/, section /*Type: String*/, json /*Type: String*/, className /*Type: String*/) // generates panels for both the employer and featured sections
-{
-	if(section == "EMPLOYER") // this is if we are generating employees section
-	{
-		eval("globalThis." + section + "PANEL" + (index+1) + " = " + "new " + className + " (" + "panel" + ".Employer" + ", " + "panel" + ".Position" +
-		 ", " + "panel" + ".Duration"+ ", " + "panel" + ".Summary" + ", " + "panel" + ".FileName" + ", " + "panel" + ".URL" + ", " + "panel" + ".BlackText" + ");"); // genertates the employerpanel class objects
-
-		eval(section + "PANEL" + (index+1) + "." + "displayText" + "(" + "document.querySelector(\"" + "#employment-panel-" + (index+1) + " > " + "h3\")" + ");"); // renders the text
-		eval(section + "PANEL" + (index+1) + "." + "renderImage" + "(" + "document.querySelector(\"" + "#employment-panel-" + (index+1) + " > " + "img\")" + ");"); // renders the image
-		
-		if(panel.Employer == "") // removes panel if empty
-		{
-			document.getElementById("employer-panel-" + (index+1)).remove();
-		};
-
-	}
-	
-	else // this is if we are generating the featured section
-	{
-		eval("globalThis." + section + "PANEL" + (index+1) + " = " + "new " + className + " (" + "panel" + ".ProjectName" + ", " + "panel" + ".Award" +
-		 ", " + "panel" + ".Skills"+ ", " + "panel" + ".Duration" + ", " + "panel" + ".Summary" + ", " + "panel" + ".FileName" + ", " + "panel" + ".URL" + ", " + "panel" + ".BlackText" + ");"); // genertates the featuredpanel class objects
-		
-		eval(section + "PANEL" + (index+1) + "." + "displayText" + "(" + "document.querySelector(\"" + "#featured-panel-" + (index+1) + " > " + "h3\")" + ");"); // renders the text
-		eval(section + "PANEL" + (index+1) + "." + "renderImage" + "(" + "document.querySelector(\"" + "#featured-panel-" + (index+1) + " > " + "img\")" + ");"); // renders the image
-		
-		if(panel.ProjectName == "") // removes panel if empty
-		{
-			document.getElementById("featured-panel-" + (index+1)).remove();
-		};
-	}
-}
-
-const AnimateOnScrolls = document.querySelectorAll(".AnimateOnScroll")
-
-const observer = new IntersectionObserver(entries => 
-	{
-		entries.forEach(entry =>
-			{
-				entry.target.classList.toggle("animate", entry.isIntersecting)
-				if (entry.isIntersecting) observer.unobserve(entry.target)
-			}
-		)
-		console.log(entries)
-	}, {
-		threshold: 0.5,
-	})
-
-	AnimateOnScrolls.forEach(AnimateOnScroll =>
-		{
-			observer.observe(AnimateOnScroll)
-		})
-	
-
-		const Navigations = document.querySelectorAll(".Nav");
-		
-		for (let i = 0; i < Navigations.length; i++)
-		{
-			Navigations[i].addEventListener("click", function(evt)
-			{
-				var target = evt.target;
-				if(target.id == "pgbtn")
-				{
-					headerdisplay();
-					navdisplay(document.getElementById("programmingnav"))
-				}
-
-				else if (target.id == "pbbtn")
-				{
-					headerdisplay();
-					navdisplay(document.getElementById("psuedoblessingsnav"))
-				}
-
-				else if (target.id == "artbtn")
-				{
-					headerdisplay();
-					navdisplay(document.getElementById("artistrynav"))
-				}
-			})
-		}
-		
-		function navdisplay(id)
-		{
-			var x = id;
-
-			if(x.style.display === "none" || x.style.display === "")
-			{
-				x.style.display = "grid";
-			}
-
-			else
-			{
-				x.style.display="none";
-			}
-		}
-		
-		
-		function headerdisplay()
-		{
-			x = document.getElementById("header");
-			if(x.style.display === "none")
-			{
-				x.style.display = "flex";
-			}
-
-			else
-			{
-				x.style.display="none";
-			}
-		}
-
-const AnimateOnButtonPress = document.querySelectorAll(".AnimateOnButtonPress");
-
-for (let i = 0; i < AnimateOnButtonPress.length; i++){
-	AnimateOnButtonPress[i].addEventListener('click', (ev)=>{
-		let btn = ev.target;
-		if(btn.classList.contains('animate'))
-			{
-				btn.classList.remove('animate');
-				void btn.offsetWidth;
-				btn.classList.add('animate', 'reverse');
-				btn.addEventListener("animationend",function (ev) {
-					btn.classList.remove('animate', 'reverse');
-				})
-				
-			}
-		else
-			{
-				btn.classList.add('animate');
-			}
-	})
-}
-    

@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@0;1&family=Bebas+Neue&family=Carter+One&family=Fira+Code:wght@600&family=Rubik:ital,wght@0,300;1,300&family=Source+Code+Pro:ital,wght@0,300;1,300&display=swap');
+
+body
+{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: Carter One;
+}
+
+h2
+{
+    font-size: 4vw;
+    color: white;
+}
+
+p
+{
+    font-family: Rubik;
+    color: white;
+}
+
+/* Typography [SITEWIDE]*/
+
+.PsuedoBlessingsH
+{
+    font-family: 'Bebas Neue', sans-serif;	
+}
+
+.ArtistryH
+{
+    font-family: "Carter One";	
+}
+
+.ProgrammingH
+{
+    font-family: 'Fira Code', monospace;
+}
+
+.PsuedoBlessingsP
+{
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.ArtistryP
+{
+    font-family: 'Rubik', sans-serif;
+}
+
+.ProgrammingP
+{
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+/*Navigation & Footer Styles [SITEWIDE]*/
+#navigation
+{
+	position: fixed;
+	top: 0px;
+	z-index: 999;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(rgb(79, 39, 39), rgba(79, 39, 39, 0.747), rgba(255,0,0,0)); /*FALLBACK NEEDED*/
+	justify-content: center;
+	padding: 1em;
+}
+
+#main-navigation
+{
+	display: flex;
+}
+
+#main-navigation button
+{
+	color: white;
+	width: 33%;
+	height: auto;
+}
+
+#psuedoblessings-sub-navigation /*Implement the showing affect with javascript*/
+{
+	display: none;
+}
+
+#psuedoblessings-sub-navigation button
+{
+	color: white;
+	width: 33%;
+	height: auto;
+}
+
+#artistry-sub-navigation /*Implement the showing affect with javascript*/
+{
+	display: none;
+}
+
+#artistry-sub-navigation button
+{
+	color: white;
+	width: 33%;
+	height: auto;
+}
+
+#footer
+{
+	height: auto;
+	width: 100%;
+	margin-top: auto;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(79, 39, 39, 0.35));
+    justify-content: center;
+	color:white
+}
+
+#social-media-links
+{
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#social-media-links img
+{
+	max-height: 50px;
+}
+
+#internal-links
+{
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex: 0 0 100%;
+	justify-content: space-evenly;
+}
+
+#internal-links div
+{
+	display: flex;
+	flex-direction: column;
+}
+
+
+/*Stylzing Utilities [SITEWIDE]*/
+
+.CleanAnchor, .CleanAnchor * /*Removes all of the default property value of an anchor tag (<a>) except cusor:pointer*/
+{
+	color:inherit;
+	text-decoration:none; 
+}
+
+.CleanButton, .CleanButton * /*Remooves all of the default property value of a button tag (<button>)*/
+{
+	border: none;
+	outline: none;
+	background: none;
+}
+
+
+img.HDImage, .HDImage img
+{
+	min-width: 1080px;
+	max-width: 3840px;
+	height: auto;
+}
+
+img.SDImage, .SDImage img
+{
+	min-width: 480px;
+	max-width: 1080px;
+	height: auto;
+}
+
+p.background--light 
+{
+	color: black;
+}
+  
+p.background--dark 
+{
+	color: white;
+}
+  
+p.background--complex 
+{
+	color: gray;
+}
+
+/*Stylzing Utilities*/
+
+.Gallery ul 
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.Gallery  li 
+{
+    height: 40vh;
+    flex-grow: 1;
+}
+  
+.Gallery li:last-child 
+{
+    flex-grow: 10;
+}
+  
+.Gallery img 
+{
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+/*Dialog Styling*/
+
+dialog
+{
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+dialog[open]
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2.5%;
+}
+
+dialog::backdrop
+{
+    background-color: rgba(51, 51, 51, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+dialog[open] #content
+{
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+dialog[open] #text
+{
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#landing
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+#landing a 
+{
+    width: 100%;
+    height: 100%;
+}
+
+#landing a button 
+{
+    width: 100%;
+    height: 100%;
+}
+
+#fullpage
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Motion Media Section */
+#motion-media-section
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#motion-media-demoreel
+{
+    height: auto;
+    width: auto;
+}
+
+#motion-media-gallery
+{
+    display: flex;
+}
+/* Visual Arts Section */
+
+#visual-arts-section
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#visual-arts-slideshow
+{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 1200px;
+    width: 700px;
+    justify-content: center;
+    align-content: center;
+}
+
+#visual-arts-slideshow img
+{
+    height: 1200px;
+    width: 700px;
+    object-fit: contain;
+}
+
+#visual-arts-gallery
+{
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+#web-design-gallery
+{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+#web-design-gallery ul img
+{
+  height: 300px ;
+  width: 130px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 100px;
+  object-fit: cover;
+  background-color: azure;
+}
+
+/* Testing To Implement Into JavaScript */

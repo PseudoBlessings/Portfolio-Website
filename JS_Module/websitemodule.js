@@ -1,34 +1,40 @@
-export{Panel, Animation, HeaderItem };
- 
-class Panel //this is the parent class for all Panel classes
+
+// Module Classes
+export class Panel //this is the parent class for all Panel classes
 {
-	constructor(name, image, summary, url, textcolor)
+	constructor(title = '', summary = '', image = '')
 	{
-		this.name = name; //Type: String | This is the name of the panel that will be used within the 
-		this.image = image; //Type: String | This is the name of the image that you want with the panel
-		this.summary = summary; //Type: String | this is a summary of what the panel is displaying
-		this.url = url; //Type: String | This is the url of where you want this link to take you when you click on it
-		this.textcolor = textcolor; //Type: String | This is the color of the text overlaying the panel's image. 
+		this.title = title;
+		this.id = title;
+
+		//creating the summary or paragraph html element <p>
+		this.panel = document.createElement("div");
+		this.panel.setAttribute("id", this.id);
+		//creating the summary or paragraph html element <p>
+		if(summary != '')
+		{
+			this.summary = document.createElement("p")
+			this.summary.textContent(summary);
+		}
+		//creating the image html element <img> 
+		this.image = document.createElement("img");
+		this.image.src = image;
+		//putting them all together
+		this.panel.append(this.summary, this.image);
 	}
 
-	gotoURL(element) // this is to make the panel clickable
+	changeImage(image)
 	{
-		element.onclick = this.url;
+		this.image.src = image;
 	}
 
-	renderImage(element /*html src*/, path = "" /*string*/) // this is renders an image on to the panel
+	changeSummary(summary)
 	{
-		element.src = "Image/" + path + this.image; // this assumes that all images are within the Image folder
+		this.summary.textContent(summary)
 	}
-
-	renderTextColor (element) // this renders the elements color
-	{
-		element.style.color = this.textcolor; 
-	}
-
 }
 
-class Animation // this is a class containing the name, location, and duration of the animation.
+export class Animation // this is a class containing the name, location, and duration of the animation.
 {
 	constructor(name, duration)
 	{
@@ -37,7 +43,7 @@ class Animation // this is a class containing the name, location, and duration o
 	}
 }
 
-class HeaderItem // Class for making header items to be added to the header
+export class HeaderItem // Class for making header items to be added to the header
 {
     constructor(image, url)
     {
@@ -45,3 +51,100 @@ class HeaderItem // Class for making header items to be added to the header
         this.url = url; // Type: String | this is the url of the link
     }
 }
+
+export class Modal // Class for making Modals
+{
+ constructor(/*string*/id = '')
+ {
+	this.dialog = document.createElement("dialog");
+	this.dialog.setAttribute("id", id) // assigning the id to the html element dialog
+	this.dialogID = id
+ }
+
+ initalizeModal() // initalize the dialouge/modal
+ {
+	document.body.insertBefore(this.dialog); // assumes that the dialog element will be added to the top of body, as it will be unaffected by other elements properties.
+ }
+}
+
+// Module Functions
+
+export function hyperlinkConverter(/*string*/ text) //function for adding hyperlink to texts, it recieves a string and converts it into an html dom without the text wrap. always assumes that the word to the left of the {} is what will be the hyperlink;
+{
+	 text.search("{") // find the position of the first 
+}
+
+export const isValidUrl = urlString=> { // code from: https://www.freecodecamp.org/news/check-if-a-javascript-string-is-a-url#how-to-use-a-regular-expression-constructor
+	var urlPattern = new RegExp('^(https?:\\/\\/)?'+ // validate protocol
+  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // validate domain name
+  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // validate OR ip (v4) address
+  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // validate port and path
+  '(\\?[;&a-z\\d%_.~+=-]*)?'+ // validate query string
+  '(\\#[-a-z\\d_]*)?$','i'); // validate fragment locator
+return !!urlPattern.test(urlString);
+}
+
+export function imageExtension (/*string*/ file)
+{
+	if(jpegExtention(file) || pngExtention(file) || gifExtention(file) || svgExtention(file) || webpExtention(file))
+	{return true}
+
+	else
+	{return false}
+}
+
+export function jpegExtention (/*string*/ file)
+{
+	let jpegRegex = new RegExp('.jpg', '.jpeg', '.jfif', 'pjpeg', '.pjp');
+
+	if(jpegRegex.test(file))
+	{return true;}
+
+	else
+	{return false;}
+}
+
+export function pngExtention (/*string*/ file)
+{
+	let pngRegex = new RegExp('.png');
+
+	if(pngRegex.test(file))
+	{return true;}
+
+	else
+	{return false;}
+}
+
+export function gifExtention (/*string*/ file)
+{
+	let gifRegex = new RegExp('.gif');
+
+	if(gifRegex.test(file))
+	{return true;}
+
+	else
+	{return false;}
+}
+
+export function svgExtention (/*string*/ file)
+{
+	let svgRegex = new RegExp('.svg');
+
+	if(svgRegex.test(file))
+	{return true;}
+
+	else
+	{return false;}
+}
+
+export function webpExtention (/*string*/ file)
+{
+	let webpRegex = new RegExp('.webp');
+
+	if(webpRegex.test(file))
+	{return true;}
+
+	else
+	{return false;}
+}
+
