@@ -1,60 +1,42 @@
 // There will only be one instance of dialog to exist, this way we can save on performance
 import {Panel, Animation, HeaderItem, imageExtension, Modal} from "./JS_Module/websitemodule.js";
 
-class ArtistryModal extends Modal
-{
-    constructor(/*string*/id = '', /*string*/content = '', /*string*/title = '', /*string*/creators = '', /*string*/paragraph = '')
+import artistrydata from './Data/Artistry/proejctdata.json' assert {type: 'json'};
+import programmingdata from './Data/Programming/proejctdata.json' assert {type: 'json'};
+import employmentdata from './Data/employmentdata.json' assert {type: 'json'};
+
+artistrydata.MotionMediaProjects.forEach( motionmediaproject =>
     {
-        super();
-        super.dialog = document.createElement("dialog");
-        super.dialog.setAttribute("id", id) // assigning the id to the html element dialog
-        super.dialogID = id;
-        this.content = document.createElement("div");
-        this.content.setAttribute("id", "content");
-
-        if(imageExtension(content))
-        this.content.innerHTML("<img onclick=" + "\"" + id + ".showModal()" + "\"" + "src=" + "\"" + "Image/" + content + "\"" + "alt=" + "\"" + "An Artwork Called" + title + "\"" + ">");
-        
-        else
-        this.content.innerHTML(content);
-
-
-        this.text = document.createElement("div");
-        this.text.setAttribute("id", "text");
-        this.text.innerHTML("<h3>" + title + "<br>" + creators + "</h3>"+"<p>" + paragraph + "</p>");
-
-        super.dialog.append(this.content, this.text);
-        document.body.insertBefore(this.dialog);
+        let img = document.createElement("img")
+        img.src = motionmediaproject.ImagePath
+        let li = document.createElement("li")
+        li.appendChild(img)
+        let ul = document.getElementById("motion-media-unorder-list")
+        ul.appendChild(li)
     }
+)
 
-    updateModal(/*string*/id = '', /*string*/content = '', /*string*/title = '', /*string*/creators = '', /*string*/paragraph = '')
+artistrydata.VisualArtsProjects.forEach( visualartsproject =>
     {
-        this.dialog.id = id;
-        this.text.innerHTML("<h3>" + title + "<br>" + creators + "</h3>"+"<p>" + paragraph + "</p>");
-        if(imageExtension(content))
-        this.content.innerHTML("<img onclick=" + "\"" + id + ".showModal()" + "\"" + "src=" + "\"" + "Image/" + content + "\"" + "alt=" + "\"" + "An Artwork Called" + title + "\"" + ">");
-        
-        else
-        this.content.innerHTML(content);
+        visualartsproject.ImagePath.forEach(image =>{
+            let img = document.createElement("img")
+            img.src = image
+            let li = document.createElement("li")
+            li.appendChild(img)
+            let ul = document.getElementById("visual-arts-unorder-list")
+            ul.appendChild(li)
+        })
     }
-}
+)
 
-class MotionMediaPanel extends Panel
-{
-    constructor(name = '', image = '')
+artistrydata.WebDesignProjects.forEach( webdesignproject =>
     {
-        super();
-        super.name = name;
-        super.image = image;
-        this.id = name;
+        let img = document.createElement("img")
+        img.src = webdesignproject.ImagePath
+        img.setAttribute("onclick", "parent.open('" + webdesignproject.URL + "')")
+        let li = document.createElement("li")
+        li.appendChild(img)
+        let ul = document.getElementById("web-design-gallery")
+        ul.appendChild(li)
     }
-
-    renderImage(element = document.createElement("img") /*HtmlElement*/, path = "" /*string*/)
-    {
-        if(imageExtension(this.image)) // this tells us that the image is stored locally
-        super.renderImage(element, path);
-
-        else
-        element.src = "http://img.youtube.com/vi/" + this.image + "/mqdefault.jpg" // this assumes that all images are within the Image folder
-    }
-}
+)

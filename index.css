@@ -88,6 +88,7 @@ p
 
 #psuedoblessings-sub-navigation /*Implement the showing affect with javascript*/
 {
+	display: flex;
 	display: none;
 }
 
@@ -175,6 +176,8 @@ img.SDImage, .SDImage img
 	height: auto;
 }
 
+/*Stylzing Utilities For JavaScript [SITEWIDE]*/
+
 /* Typography*/
 
 h1
@@ -198,7 +201,7 @@ p
 
 #header
 {
-	width: 100vw;
+	width: auto;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;

@@ -1,15 +1,21 @@
+import artistrydata from '../Data/Artistry/proejctdata.json' assert {type: 'json'};
+import programmingdata from '../Data/Programming/proejctdata.json' assert {type: 'json'};
+import employmentdata from '../Data/employmentdata.json' assert {type: 'json'};
+
 
 // Module Classes
 export class Panel //this is the parent class for all Panel classes
 {
-	constructor(title = '', summary = '', image = '')
+	constructor(title = '', summary = '', image = '', tag = [''])
 	{
 		this.title = title;
 		this.id = title;
+		this.tag = tag;
 
 		//creating the summary or paragraph html element <p>
 		this.panel = document.createElement("div");
 		this.panel.setAttribute("id", this.id);
+		this.panel.setAttribute("class", "panel");
 		//creating the summary or paragraph html element <p>
 		if(summary != '')
 		{
@@ -31,6 +37,11 @@ export class Panel //this is the parent class for all Panel classes
 	changeSummary(summary)
 	{
 		this.summary.textContent(summary)
+	}
+
+	haveTag(searchtag = '')
+	{
+		return this.tag.includes(searchtag);
 	}
 }
 
@@ -54,17 +65,17 @@ export class HeaderItem // Class for making header items to be added to the head
 
 export class Modal // Class for making Modals
 {
- constructor(/*string*/id = '')
- {
-	this.dialog = document.createElement("dialog");
-	this.dialog.setAttribute("id", id) // assigning the id to the html element dialog
-	this.dialogID = id
- }
+	constructor(/*string*/id = '')
+	{
+		this.dialog = document.createElement("dialog");
+		this.dialog.setAttribute("id", id) // assigning the id to the html element dialog
+		this.dialogID = id
+	}
 
- initalizeModal() // initalize the dialouge/modal
- {
-	document.body.insertBefore(this.dialog); // assumes that the dialog element will be added to the top of body, as it will be unaffected by other elements properties.
- }
+	initalizeModal() // initalize the dialouge/modal
+	{
+		document.body.insertBefore(this.dialog); // assumes that the dialog element will be added to the top of body, as it will be unaffected by other elements properties.
+	}
 }
 
 // Module Functions
@@ -148,3 +159,7 @@ export function webpExtention (/*string*/ file)
 	{return false;}
 }
 
+export function revealOnClick (id = '')
+{
+	document.getElementById(id).style.removeProperty("display");
+}

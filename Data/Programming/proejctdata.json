@@ -7,7 +7,7 @@
             "Summary": "This program is made with python mimicking the programming language called postscript",
             "ImagePath":"Image\\Programming\\School\\CPT_S\\CptS-355\\sspsinterpreter.png",
             "URL":"https://github.com/PsuedoBlessings/SSPS-Interpreter",
-            "Tags":["Language Design", "Python", "School"]
+            "Tags":["Language Design", "Python", "GhostScript", "Feature", "School"]
         },
 
         {
@@ -17,7 +17,7 @@
             "Summary": "This programs makes goals for both diets and excersice and stores them within a file to be accessed later.",
             "ImagePath":"Image\\Programming\\School\\CPT_S\\CptS-121\\dietplan.jpg",
             "URL":"https://github.com/PsuedoBlessings/DietPlan",
-            "Tags":["C++", "School"]
+            "Tags":["C++", "Feature", "School"]
         },
 
         {
@@ -38,6 +38,16 @@
             "ImagePath":"",
             "URL":"https://github.com/PsuedoBlessings/Assembly-Calculator",
             "Tags":["Assembly", "Computer Architecture", "School"]
+        },
+
+        {
+            "Title":"PsuedoBlessings Website",
+            "Creators":["Zvikomborero Masike"],
+            "Date":"",
+            "Summary": "This is the frontend coding of the portfolio website for any one to use",
+            "ImagePath":"Image\\Programming\\Personal\\PsuedoBlessings\\psuedoblessings.png",
+            "URL":"https://github.com/PsuedoBlessings/Portfolio-Website",
+            "Tags":["HTML", "CSS", "JavaScript", "Web Development", "Feature", "School"]
         }
     ]
 }

@@ -232,8 +232,15 @@ img.SDImage, .SDImage img
 	width: inherit;
 	height: inherit;
 	position: absolute;
-	
-}
+	text-shadow: -1.5px -1.5px 0 #000,
+	0   -1.5px 0 #000,
+	1.5px -1.5px 0 #000,
+	1.5px  0   0 #000,
+	1.5px  1.5px 0 #000,
+	0    1.5px 0 #000,
+	-1.5px  1.5px 0 #000,
+	-1.5px  0   0 #000;
+	}
 
 #feature-section
 {
@@ -293,8 +300,8 @@ img.SDImage, .SDImage img
 
 .Gallery-Text
 {
-	width: 100%;
-	height: 100%;
+	width: inherit;
+	height: inherit;
 	position: absolute;
-	
+	display: flex;
 }

@@ -211,6 +211,7 @@ p.background--complex
 {
     height: 40vh;
     flex-grow: 1;
+    margin: 5px;
 }
   
 .Gallery li:last-child 
@@ -361,7 +362,7 @@ dialog[open] #text
 }
 
 
-#web-design-gallery ul img
+#web-design-gallery li img
 {
   height: 300px ;
   width: 130px;
